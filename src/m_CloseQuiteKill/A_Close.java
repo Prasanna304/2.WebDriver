@@ -1,5 +1,6 @@
 package m_CloseQuiteKill;
 
+import java.io.File;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -11,7 +12,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class A_Close {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		File f = new File("");
+		String Path = f.getAbsolutePath();
+		System.setProperty("webdriver.gecko.driver",Path+"/Driver/geckodriver");
 		WebDriver wd = new FirefoxDriver();
 		wd.manage().window().maximize();
 		wd.navigate().to("http://book.theautomatedtester.co.uk/chapter1");
